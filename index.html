@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitify - Crea Invitaciones Digitales</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/templates.css">
+    <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container_header">
+            <div class="logo-container">
+                <img src="./resource/logo_invitify.png" alt="Invitify Logo" class="logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="#templates">Plantillas</a></li>
+                    <li><a href="#how-it-works">Cómo funciona</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="btn primary-btn" id="start-creating">Comenzar</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Crea invitaciones digitales inolvidables</h2>
+                    <p>Diseña, personaliza y comparte invitaciones únicas para cualquier ocasión.</p>
+                    <button class="btn primary-btn large-btn">Explorar Plantillas</button>
+                </div>
+                <div class="hero-image">
+                    <div class="invitation-preview">
+                        <!-- Preview dinámico -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="templates-section" id="templates">
+            <div class="container">
+                <h2>Nuestras Plantillas</h2>
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">Todas</button>
+                    <button class="category-btn" data-category="wedding">Bodas</button>
+                    <button class="category-btn" data-category="birthday">Cumpleaños</button>
+                    <button class="category-btn" data-category="corporate">Corporativas</button>
+                </div>
+                <div class="templates-grid" id="templates-container">
+                    <!-- Plantillas se cargarán dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <section class="editor-section" id="editor" style="display: none;">
+            <div class="container">
+                <div class="editor-header">
+                    <h2>Editor de Invitación</h2>
+                    <div class="editor-actions">
+                        <button class="btn secondary-btn" id="save-design">Guardar</button>
+                        <button class="btn primary-btn" id="export-design">Exportar</button>
+                    </div>
+                </div>
+                <div class="editor-container">
+                    <div class="editor-tools">
+                        <div class="tool-section">
+                            <h3>Texto</h3>
+                            <input type="text" id="text-input" placeholder="Añadir texto">
+                            <div class="text-controls">
+                                <input type="color" id="text-color" value="#6d655a">
+                                <select id="font-family">
+                                    <option value="Arial">Arial</option>
+                                    <option value="Times New Roman">Times New Roman</option>
+                                    <option value="Courier New">Courier New</option>
+                                </select>
+                                <input type="range" id="font-size" min="10" max="72" value="16">
+                            </div>
+                            <button class="btn small-btn" id="add-text">Añadir Texto</button>
+                        </div>
+                        <div class="tool-section">
+                            <h3>Imágenes</h3>
+                            <input type="file" id="image-upload" accept="image/*">
+                            <div class="image-controls">
+                                <input type="range" id="image-size" min="50" max="200" value="100">
+                                <button class="btn small-btn" id="add-image">Añadir Imagen</button>
+                            </div>
+                        </div>
+                        <div class="tool-section">
+                            <h3>Fondo</h3>
+                            <input type="color" id="bg-color" value="#f5ece1">
+                            <div class="pattern-options">
+                                <div class="pattern" data-pattern="none"></div>
+                                <div class="pattern" data-pattern="dots"></div>
+                                <div class="pattern" data-pattern="lines"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor-preview">
+                        <div class="invitation-canvas" id="invitation-canvas">
+                            <!-- Canvas donde se editará la invitación -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Invitify Logo" class="footer-logo">
+                    <p>Creando momentos memorables desde 2023</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#">Términos de servicio</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 Invitify. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./editor.js"></script>
+    <script src="./main.js"></script>
+    <script src="./templates.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
