@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Ana & Carlos</title>
+    <link rel="stylesheet" href="../css/styleBoda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="invitation-container">
+        <header class="invitation-header">
+            <h1>Ana & Carlos</h1>
+            <p class="subtitle">Tienen el honor de invitarte a celebrar su boda</p>
+        </header>
+
+        <div class="invitation-details">
+            <div class="detail-section">
+                <h2>Fecha</h2>
+                <p class="editable" id="wedding-date">15 de Agosto, 2023</p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Lugar</h2>
+                <p class="editable" id="wedding-location">Hacienda Las Flores, Valle de Bravo</p>
+            </div>
+
+            <div class="detail-section">
+                <h2>Hora</h2>
+                <p class="editable" id="wedding-time">4:00 PM</p>
+            </div>
+        </div>
+
+        <div class="rsvp-section">
+            <h2>Confirma tu asistencia</h2>
+            <form id="rsvp-form">
+                <input type="text" id="guest-name" placeholder="Tu nombre" required>
+                <select id="guest-attendance" required>
+                    <option value="" disabled selected>Confirmas tu asistencia?</option>
+                    <option value="yes">Con gusto asistiré</option>
+                    <option value="no">Lamentablemente no podré asistir</option>
+                </select>
+                <textarea id="guest-message" placeholder="Mensaje opcional"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <footer class="invitation-footer">
+            <p>"El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección."</p>
+            <p>- Antoine de Saint-Exupéry</p>
+        </footer>
+    </div>
+
+    <script src="../js/boda.js"></script>
+</body>
+</html>
