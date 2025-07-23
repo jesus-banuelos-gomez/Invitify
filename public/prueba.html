@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Lorena & Gustavo</title>
+    <link rel="stylesheet" href="../css/prueba.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="editor-panel">
+        <h3>Editor de Invitación</h3>
+        <div class="editor-section">
+            <h4>Texto</h4>
+            <div class="form-group">
+                <label>Nombres</label>
+                <input type="text" id="edit-names" value="Lorena e Gustavo">
+            </div>
+            <div class="form-group">
+                <label>Fecha</label>
+                <input type="text" id="edit-date" value="13 DE MAIO DE 2024">
+            </div>
+            <div class="form-group">
+                <label>Hora</label>
+                <input type="text" id="edit-time" value="SÁBADO, ÀS 16H">
+            </div>
+            <div class="form-group">
+                <label>Lugar</label>
+                <input type="text" id="edit-place" value="Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG">
+            </div>
+            <div class="form-group">
+                <label>Versículo</label>
+                <textarea id="edit-verse">T. John de Solo, tenham amor. Pelo menos que perfeitamente todas as coisas? - Consumem 3:4.</textarea>
+            </div>
+        </div>
+
+        <div class="editor-section">
+            <h4>Colores</h4>
+            <div class="form-group">
+                <label>Color principal</label>
+                <input type="color" id="edit-main-color" value="#8B5A2B">
+            </div>
+            <div class="form-group">
+                <label>Color secundario</label>
+                <input type="color" id="edit-secondary-color" value="#6D4622">
+            </div>
+            <div class="form-group">
+                <label>Color de texto</label>
+                <input type="color" id="edit-text-color" value="#333333">
+            </div>
+            <div class="form-group">
+                <label>Fondo</label>
+                <select id="edit-background">
+                    <option value="texture1">Textura 1</option>
+                    <option value="texture2">Textura 2</option>
+                    <option value="gradient">Degradê</option>
+                    <option value="solid">Sólido</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="editor-section">
+            <h4>Tipografía</h4>
+            <div class="form-group">
+                <label>Fuente títulos</label>
+                <select id="edit-title-font">
+                    <option value="'Dancing Script', cursive">Dancing Script</option>
+                    <option value="'Playfair Display', serif">Playfair Display</option>
+                    <option value="'Montserrat', sans-serif">Montserrat</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Fuente texto</label>
+                <select id="edit-text-font">
+                    <option value="'Montserrat', sans-serif">Montserrat</option>
+                    <option value="'Playfair Display', serif">Playfair Display</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tamaño texto</label>
+                <input type="range" id="edit-text-size" min="12" max="24" value="16">
+            </div>
+        </div>
+
+        <button id="export-pdf">Exportar PDF</button>
+        <button id="export-jpg">Exportar JPG</button>
+    </div>
+
+    <div class="invitation-container" id="invitation">
+        <div class="invitation-content">
+            <div class="verse-section">
+                <p class="verse" id="invitation-verse">T. John de Solo, tenham amor. Pelo menos que perfeitamente todas as coisas? - Consumem 3:4.</p>
+            </div>
+
+            <div class="names-section">
+                <h1 id="invitation-names">Lorena e Gustavo</h1>
+            </div>
+
+            <div class="details-section">
+                <p>Com a benção de Deus e de seus pais</p>
+                <p>Sapa de Fátima Obrigata</p>
+                <p>Verdadeira Lava Lima</p>
+                <p>Mala Verona e da Siba</p>
+                <p>Cabeiro Florenta da Siba</p>
+            </div>
+
+            <div class="date-section">
+                <p id="invitation-date">13 DE MAIO DE 2024</p>
+                <p id="invitation-time">SÁBADO, ÀS 16H</p>
+            </div>
+
+            <div class="place-section">
+                <p id="invitation-place">Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG</p>
+            </div>
+
+            <div class="footer-section">
+                <p>CIDOR, ENS BRISÉCS</p>
+                <p id="invitation-date2">13 DE MAIO DE 2024</p>
+                <p id="invitation-time2">SÁBADO, ÀS 16H</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/editorPrueba.js"></script>
+    <script src="../js/exportarPrueba.js"></script>
+</body>
+</html>

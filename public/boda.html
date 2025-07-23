@@ -31,6 +31,47 @@
             </div>
         </div>
 
+        <!-- Añade esto después de la sección de detalles y antes del RSVP -->
+<div class="image-gallery-section">
+    <h2>Galería de Imágenes</h2>
+    <div class="image-upload-container">
+        <input type="file" id="image-upload" accept="image/*" multiple>
+        <button id="upload-btn">Cargar Imágenes</button>
+        <div class="image-preview" id="image-preview"></div>
+    </div>
+    
+    <div class="image-style-controls">
+        <h3>Estilos para Imágenes</h3>
+        <div class="style-control">
+            <label for="border-radius">Borde redondeado:</label>
+            <input type="range" id="border-radius" min="0" max="50" value="0">
+            <span id="radius-value">0px</span>
+        </div>
+        <div class="style-control">
+            <label for="image-width">Ancho:</label>
+            <input type="range" id="image-width" min="100" max="500" value="300">
+            <span id="width-value">300px</span>
+        </div>
+        <div class="style-control">
+            <label for="image-opacity">Opacidad:</label>
+            <input type="range" id="image-opacity" min="10" max="100" value="100">
+            <span id="opacity-value">100%</span>
+        </div>
+        <div class="style-control">
+            <label for="image-filter">Filtro:</label>
+            <select id="image-filter">
+                <option value="none">Ninguno</option>
+                <option value="grayscale">Escala de grises</option>
+                <option value="sepia">Sepia</option>
+                <option value="blur">Desenfoque</option>
+                <option value="brightness">Brillo</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="styled-gallery" id="styled-gallery"></div>
+</div>
+
         <div class="rsvp-section">
             <h2>Confirma tu asistencia</h2>
             <form id="rsvp-form">
