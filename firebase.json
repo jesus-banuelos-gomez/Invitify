@@ -14,15 +14,15 @@
     ],
     "headers": [
       {
-        "source": "/js/**",  
+        "source": "/js/**",
         "headers": [{"key": "Cache-Control", "value": "max-age=3600"}]
       },
       {
-        "source": "/css/**", 
+        "source": "/css/**",
         "headers": [{"key": "Cache-Control", "value": "max-age=3600"}]
       },
       {
-        "source": "/images/**", 
+        "source": "/images/**",
         "headers": [{"key": "Cache-Control", "value": "max-age=86400"}]
       }
     ]
