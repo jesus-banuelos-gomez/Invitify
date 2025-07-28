@@ -5,34 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda - Lorena & Gustavo</title>
     <link rel="stylesheet" href="../css/prueba.css">
+   
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
-    <div class="editor-panel">
+
+
+
+
+
+
+
+    <section class="editor-panel">
         <h3>Editor de Invitación</h3>
         <div class="editor-section">
             <h4>Texto</h4>
             <div class="form-group">
                 <label>Nombres</label>
-                <input type="text" id="edit-names" value="Lorena e Gustavo">
+                <input type="text" id="edit-names" value="Lorena & Gustavo">
+            </div>
+            <div class="form-group">
+                <label>Lugar Misa</label>
+                <input type="text" id="edit-place-misa" value="En la Parroquia de San Miguel, Ciudad de México">
+            </div>
+            <div class="form-group">
+                <label>Hora Misa</label>
+                <input type="text" id="edit-time-misa" value=" 4:00 PM">
+            </div>
+            <div class="form-group">
+                <label>Lugar Recepción</label>
+                <input type="text" id="edit-place-reception" value="La celebración continuará en el Salón Las Gardenias">
+            </div>
+            <div class="form-group">
+                <label>Hora Recepción</label>
+                <input type="text" id="edit-time-reception" value=" 6:00 PM">
             </div>
             <div class="form-group">
                 <label>Fecha</label>
-                <input type="text" id="edit-date" value="13 DE MAIO DE 2024">
-            </div>
-            <div class="form-group">
-                <label>Hora</label>
-                <input type="text" id="edit-time" value="SÁBADO, ÀS 16H">
-            </div>
-            <div class="form-group">
-                <label>Lugar</label>
-                <input type="text" id="edit-place" value="Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG">
+                <input type="text" id="edit-date" value="El sábado 15 de junio de 2025">
             </div>
             <div class="form-group">
                 <label>Versículo</label>
-                <textarea id="edit-verse">T. John de Solo, tenham amor. Pelo menos que perfeitamente todas as coisas? - Consumem 3:4.</textarea>
+                <textarea id="edit-verse">Con la bendición de Dios y nuestros padres</textarea>
             </div>
         </div>
 
@@ -40,21 +65,23 @@
             <h4>Colores</h4>
             <div class="form-group">
                 <label>Color principal</label>
-                <input type="color" id="edit-main-color" value="#8B5A2B">
+                <input type="color" id="edit-main-color" value="#000000">
             </div>
             <div class="form-group">
-                <label>Color secundario</label>
-                <input type="color" id="edit-secondary-color" value="#6D4622">
+                <label>Color fondo</label>
+                <input type="color" id="edit-secondary-color" value="#ffffff">
             </div>
             <div class="form-group">
                 <label>Color de texto</label>
-                <input type="color" id="edit-text-color" value="#333333">
+                <input type="color" id="edit-text-color" value="#000000">
             </div>
             <div class="form-group">
                 <label>Fondo</label>
                 <select id="edit-background">
-                    <option value="texture1">Textura 1</option>
-                    <option value="texture2">Textura 2</option>
+                    <option value="texture1">Fondo 1</option>
+                    <option value="texture2">Fondo 2</option>
+                    <option value="texture3">Fondo 3</option>
+                    <option value="texture4">Fondo 4</option>
                     <option value="gradient">Degradê</option>
                     <option value="solid">Sólido</option>
                 </select>
@@ -66,9 +93,14 @@
             <div class="form-group">
                 <label>Fuente títulos</label>
                 <select id="edit-title-font">
-                    <option value="'Dancing Script', cursive">Dancing Script</option>
+                    
                     <option value="'Playfair Display', serif">Playfair Display</option>
                     <option value="'Montserrat', sans-serif">Montserrat</option>
+                    <option value="'Courgette', cursive">Courgette</option>
+                    <option value="'Lato', sans-serif" data-weight="100">Lato Thin</option>
+                    <option value="'Dancing Script', cursive">Dancing Script</option>
+
+                    
                 </select>
             </div>
             <div class="form-group">
@@ -76,6 +108,9 @@
                 <select id="edit-text-font">
                     <option value="'Montserrat', sans-serif">Montserrat</option>
                     <option value="'Playfair Display', serif">Playfair Display</option>
+                    <option value="'Courgette', cursive">Courgette</option>
+                    <option value="'Lato', sans-serif" data-weight="100">Lato Thin</option>
+                    <option value="'Dancing Script', cursive">Dancing Script</option>
                 </select>
             </div>
             <div class="form-group">
@@ -84,46 +119,98 @@
             </div>
         </div>
 
-        <button id="export-pdf">Exportar PDF</button>
-        <button id="export-jpg">Exportar JPG</button>
-    </div>
+                <!-- Añade esto después de la sección de detalles y antes del RSVP -->
+        <div class="image-gallery-section">
+            <h2>Galería de Imágenes</h2>
+            <div class="image-upload-container">
+                <input type="file" id="image-upload" accept="image/*" multiple>
+                <button id="upload-btn">Cargar Imágenes</button>
+            </div>
+            <div class="image-preview" id="image-preview"></div>
+        </div>
+    
+        <div class="image-style-controls">
+            <h3>Estilos para Imágenes</h3>
+            <div class="style-control">
+            <label for="border-radius">Borde redondeado:</label>
+            <input type="range" id="border-radius" min="0" max="50" value="0">
+            <span id="radius-value">0px</span>
+        </div>
+        <div class="style-control">
+            <label for="image-width">Ancho:</label>
+            <input type="range" id="image-width" min="100" max="500" value="300">
+            <span id="width-value">300px</span>
+        </div>
+        <div class="style-control">
+            <label for="image-opacity">Opacidad:</label>
+            <input type="range" id="image-opacity" min="10" max="100" value="100">
+            <span id="opacity-value">100%</span>
+        </div>
+        <div class="style-control">
+            <label for="image-filter">Filtro:</label>
+            <select id="image-filter">
+                <option value="none">Ninguno</option>
+                <option value="grayscale">Escala de grises</option>
+                <option value="sepia">Sepia</option>
+                <option value="blur">Desenfoque</option>
+                <option value="brightness">Brillo</option>
+            </select>
+        </div>
+        </div>
+    
+             <div class="styled-gallery" id="styled-gallery"></div>
+        </div>
 
-    <div class="invitation-container" id="invitation">
+
+
+        <div class="expBottom">
+            <button id="export-pdf">Exportar PDF</button>
+            <button id="export-jpg">Exportar JPG</button>
+        </div>
+        
+    </section>
+
+
+    <!--Contenedor invitacion-->
+    <section class="invitation-container" id="invitation">
         <div class="invitation-content">
             <div class="verse-section">
                 <p class="verse" id="invitation-verse">T. John de Solo, tenham amor. Pelo menos que perfeitamente todas as coisas? - Consumem 3:4.</p>
             </div>
 
             <div class="names-section">
-                <h1 id="invitation-names">Lorena e Gustavo</h1>
+                <h1 id="invitation-names">Lorena Y Gustavo</h1>
             </div>
 
             <div class="details-section">
-                <p>Com a benção de Deus e de seus pais</p>
-                <p>Sapa de Fátima Obrigata</p>
-                <p>Verdadeira Lava Lima</p>
-                <p>Mala Verona e da Siba</p>
-                <p>Cabeiro Florenta da Siba</p>
+                <p>📜 "Con honor, los invitamos a nuestra boda"</p>
+                <p>🌿 "Con alegría, compartimos nuestro amor"</p>
+                <p>🕊️ "Bajo la gracia de Dios, unimos nuestras vidas"</p>
             </div>
 
             <div class="date-section">
-                <p id="invitation-date">13 DE MAIO DE 2024</p>
-                <p id="invitation-time">SÁBADO, ÀS 16H</p>
+                <p id="invitation-date">13 DE MAYO DE 2024</p>
+                <p id="invitation-timeM">SÁBADO, A LAS 16H</p>
             </div>
 
-            <div class="place-section">
-                <p id="invitation-place">Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG</p>
+            <div class="date-section">
+                <p id="invitation-placeR">Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG</p>
+                <p id="invitation-timeR">SÁBADO, A LAS 16H</p>
+                <p id="invitation-placeM">Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG</p>
             </div>
+
+        
 
             <div class="footer-section">
-                <p>CIDOR, ENS BRISÉCS</p>
-                <p id="invitation-date2">13 DE MAIO DE 2024</p>
-                <p id="invitation-time2">SÁBADO, ÀS 16H</p>
+                <p>Acompañados de nuestros seres queridos, iniciamos esta nueva etapa juntos.</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="../js/editorPrueba.js"></script>
     <script src="../js/exportarPrueba.js"></script>
+    <script src="../js/CargarFile.js"></script>
+
+    
 </body>
 </html>

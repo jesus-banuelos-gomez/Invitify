@@ -2,15 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Elementos editables
     const namesInput = document.getElementById('edit-names');
     const dateInput = document.getElementById('edit-date');
-    const timeInput = document.getElementById('edit-time');
-    const placeInput = document.getElementById('edit-place');
+    const timeInputM = document.getElementById('edit-time-misa');
+    const placeInputM = document.getElementById('edit-place-misa');
+    const timeInputR = document.getElementById('edit-time-reception');
+    const placeInputR = document.getElementById('edit-place-reception');
     const verseInput = document.getElementById('edit-verse');
     
     // Elementos de la invitación
     const invitationNames = document.getElementById('invitation-names');
     const invitationDate = document.getElementById('invitation-date');
-    const invitationTime = document.getElementById('invitation-time');
-    const invitationPlace = document.getElementById('invitation-place');
+    const invitationTimeM = document.getElementById('invitation-timeM');
+    const invitationPlaceM = document.getElementById('invitation-placeM');
+    const invitationTimeR = document.getElementById('invitation-timeR');
+    const invitationPlaceR = document.getElementById('invitation-placeR');
     const invitationVerse = document.getElementById('invitation-verse');
     const invitationDate2 = document.getElementById('invitation-date2');
     const invitationTime2 = document.getElementById('invitation-time2');
@@ -28,8 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateText() {
         invitationNames.textContent = namesInput.value;
         invitationDate.textContent = dateInput.value;
-        invitationTime.textContent = timeInput.value;
-        invitationPlace.textContent = placeInput.value;
+        invitationTimeM.textContent = timeInputM.value;
+        invitationPlaceM.textContent = placeInputM.value;
+        invitationTimeR.textContent = timeInputR.value;
+        invitationPlaceR.textContent = placeInputR.value;
         invitationVerse.textContent = verseInput.value;
         invitationDate2.textContent = dateInput.value;
         invitationTime2.textContent = timeInput.value;
@@ -53,13 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const invitation = document.getElementById('invitation');
         switch(backgroundInput.value) {
             case 'texture1':
-                invitation.style.backgroundImage = "url('assets/images/texture1.jpg')";
+                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo1.jpeg')");
                 break;
             case 'texture2':
-                invitation.style.backgroundImage = "url('assets/images/texture2.jpg')";
+                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo2.jpeg')");
+                break;
+            case 'texture3':
+                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo3.jpeg')");
+                break;
+            case 'texture4':
+                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo4.png')");
                 break;
             case 'gradient':
-                invitation.style.backgroundImage = "linear-gradient(to bottom, #f9f3f0, #e8d7d0)";
+                 document.documentElement.style.setProperty('--secondary-color',"linear-gradient(to bottom, #f9f3f0, #e8d7d0)");
                 break;
             case 'solid':
                 invitation.style.backgroundImage = "none";
@@ -71,8 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners
     namesInput.addEventListener('input', updateText);
     dateInput.addEventListener('input', updateText);
-    timeInput.addEventListener('input', updateText);
-    placeInput.addEventListener('input', updateText);
+    timeInputM.addEventListener('input', updateText);
+    placeInputM.addEventListener('input', updateText);
+    timeInputR.addEventListener('input', updateText);
+    placeInputR.addEventListener('input', updateText);
     verseInput.addEventListener('input', updateText);
     
     mainColorInput.addEventListener('input', updateStyles);
@@ -82,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     titleFontInput.addEventListener('change', updateStyles);
     textFontInput.addEventListener('change', updateStyles);
     textSizeInput.addEventListener('input', updateStyles);
+    
     
     // Inicializar
     updateText();

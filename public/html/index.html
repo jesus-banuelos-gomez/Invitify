@@ -9,6 +9,8 @@
     
 </head>
 <body>
+
+    <!--NavBar-->
     <header class="main-header">
         <div class="container_header">
             <div class="logo-container">
@@ -59,57 +61,7 @@
             </div>
         </section>
 
-        <section class="editor-section" id="editor" style="display: none;">
-            <div class="container">
-                <div class="editor-header">
-                    <h2>Editor de Invitación</h2>
-                    <div class="editor-actions">
-                        <button class="btn secondary-btn" id="save-design">Guardar</button>
-                        <button class="btn primary-btn" id="export-design">Exportar</button>
-                    </div>
-                </div>
-                <div class="editor-container">
-                    <div class="editor-tools">
-                        <div class="tool-section">
-                            <h3>Texto</h3>
-                            <input type="text" id="text-input" placeholder="Añadir texto">
-                            <div class="text-controls">
-                                <input type="color" id="text-color" value="#6d655a">
-                                <select id="font-family">
-                                    <option value="Arial">Arial</option>
-                                    <option value="Times New Roman">Times New Roman</option>
-                                    <option value="Courier New">Courier New</option>
-                                </select>
-                                <input type="range" id="font-size" min="10" max="72" value="16">
-                            </div>
-                            <button class="btn small-btn" id="add-text">Añadir Texto</button>
-                        </div>
-                        <div class="tool-section">
-                            <h3>Imágenes</h3>
-                            <input type="file" id="image-upload" accept="image/*">
-                            <div class="image-controls">
-                                <input type="range" id="image-size" min="50" max="200" value="100">
-                                <button class="btn small-btn" id="add-image">Añadir Imagen</button>
-                            </div>
-                        </div>
-                        <div class="tool-section">
-                            <h3>Fondo</h3>
-                            <input type="color" id="bg-color" value="#f5ece1">
-                            <div class="pattern-options">
-                                <div class="pattern" data-pattern="none"></div>
-                                <div class="pattern" data-pattern="dots"></div>
-                                <div class="pattern" data-pattern="lines"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="editor-preview">
-                        <div class="invitation-canvas" id="invitation-canvas">
-                            <!-- Canvas donde se editará la invitación -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      
     </main>
 
     <footer class="main-footer">
