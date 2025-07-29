@@ -59,16 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const invitation = document.getElementById('invitation');
         switch(backgroundInput.value) {
             case 'texture1':
-                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo1.jpeg')");
+                document.documentElement.style.setProperty('--bg-image',"url('../Resource/fondos/fondo1.jpeg')");
                 break;
             case 'texture2':
-                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo2.jpeg')");
+                document.documentElement.style.setProperty('--bg-image',"url('../Resource/fondos/fondo2.jpeg')");
                 break;
             case 'texture3':
-                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo3.jpeg')");
+                document.documentElement.style.setProperty('--bg-image',"url('../Resource/fondos/fondo3.jpeg')");
                 break;
             case 'texture4':
-                document.documentElement.style.setProperty('--bg-image',"url('../resource/fondos/fondo4.png')");
+                document.documentElement.style.setProperty('--bg-image',"url('../Resource/fondos/fondo4.png')");
                 break;
             case 'gradient':
                  document.documentElement.style.setProperty('--secondary-color',"linear-gradient(to bottom, #f9f3f0, #e8d7d0)");
