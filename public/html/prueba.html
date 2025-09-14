@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda - Lorena & Gustavo</title>
     <link rel="stylesheet" href="../css/prueba.css">
+
    
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -13,204 +14,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+PL:wght@100..400&display=swap" rel="stylesheet">
 
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Merriweather:wght@400;700&family=Lora:wght@400;700&family=Cormorant+Garamond:wght@400;700&family=Sacramento&family=Tangerine:wght@400;700&family=Great+Vibes&family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;700&family=Josefin+Sans:wght@400;700&family=Oswald:wght@400;700&family=Fjalla+One&family=Pacifico&family=Indie+Flower&family=Permanent+Marker&family=Lobster&family=Bebas+Neue&family=Poppins:wght@400;700&family=Raleway:wght@400;700&family=Spectral:wght@400;700&family=Crimson+Pro:wght@400;700&family=Alegreya:wght@400;400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-
-
-
-
-
-
-    <section class="editor-panel">
+    <section class="editor-panel" >
         <h3>Editor de Invitación</h3>
-        <div class="editor-section">
-            <h4>Texto</h4>
-            <div class="form-group">
-                <label>Nombres</label>
-                <input type="text" id="edit-names" value="Lorena & Gustavo">
-            </div>
-            <div class="form-group">
-                <label>Lugar Misa</label>
-                <input type="text" id="edit-place-misa" value="En la Parroquia de San Miguel, Ciudad de México">
-            </div>
-            <div class="form-group">
-                <label>Hora Misa</label>
-                <input type="text" id="edit-time-misa" value=" 4:00 PM">
-            </div>
-            <div class="form-group">
-                <label>Lugar Recepción</label>
-                <input type="text" id="edit-place-reception" value="La celebración continuará en el Salón Las Gardenias">
-            </div>
-            <div class="form-group">
-                <label>Hora Recepción</label>
-                <input type="text" id="edit-time-reception" value=" 6:00 PM">
-            </div>
-            <div class="form-group">
-                <label>Fecha</label>
-                <input type="text" id="edit-date" value="El sábado 15 de junio de 2025">
-            </div>
-            <div class="form-group">
-                <label>Versículo</label>
-                <textarea id="edit-verse">Con la bendición de Dios y nuestros padres</textarea>
-            </div>
-        </div>
-
-        <div class="editor-section">
-            <h4>Colores</h4>
-            <div class="form-group">
-                <label>Color principal</label>
-                <input type="color" id="edit-main-color" value="#000000">
-            </div>
-            <div class="form-group">
-                <label>Color fondo</label>
-                <input type="color" id="edit-secondary-color" value="#ffffff">
-            </div>
-            <div class="form-group">
-                <label>Color de texto</label>
-                <input type="color" id="edit-text-color" value="#000000">
-            </div>
-            <div class="form-group">
-                <label>Fondo</label>
-                <select id="edit-background">
-                    <option value="texture1">Fondo 1</option>
-                    <option value="texture2">Fondo 2</option>
-                    <option value="texture3">Fondo 3</option>
-                    <option value="texture4">Fondo 4</option>
-                    <option value="gradient">Degradê</option>
-                    <option value="solid">Sólido</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="editor-section">
-            <h4>Tipografía</h4>
-            <div class="form-group">
-                <label>Fuente títulos</label>
-                <select id="edit-title-font">
-                    
-                    <option value="'Playfair Display', serif">Playfair Display</option>
-                    <option value="'Montserrat', sans-serif">Montserrat</option>
-                    <option value="'Courgette', cursive">Courgette</option>
-                    <option value="'Lato', sans-serif" data-weight="100">Lato Thin</option>
-                    <option value="'Dancing Script', cursive">Dancing Script</option>
-
-                    
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Fuente texto</label>
-                <select id="edit-text-font">
-                    <option value="'Montserrat', sans-serif">Montserrat</option>
-                    <option value="'Playfair Display', serif">Playfair Display</option>
-                    <option value="'Courgette', cursive">Courgette</option>
-                    <option value="'Lato', sans-serif" data-weight="100">Lato Thin</option>
-                    <option value="'Dancing Script', cursive">Dancing Script</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Tamaño texto</label>
-                <input type="range" id="edit-text-size" min="12" max="24" value="16">
-            </div>
-        </div>
-
-                <!-- Añade esto después de la sección de detalles y antes del RSVP -->
-        <div class="image-gallery-section">
-            <h2>Galería de Imágenes</h2>
-            <div class="image-upload-container">
-                <input type="file" id="image-upload" accept="image/*" multiple>
-                <button id="upload-btn">Cargar Imágenes</button>
-            </div>
-            <div class="image-preview" id="image-preview"></div>
-        </div>
-    
-        <div class="image-style-controls">
-            <h3>Estilos para Imágenes</h3>
-            <div class="style-control">
-            <label for="border-radius">Borde redondeado:</label>
-            <input type="range" id="border-radius" min="0" max="50" value="0">
-            <span id="radius-value">0px</span>
-        </div>
-        <div class="style-control">
-            <label for="image-width">Ancho:</label>
-            <input type="range" id="image-width" min="100" max="500" value="300">
-            <span id="width-value">300px</span>
-        </div>
-        <div class="style-control">
-            <label for="image-opacity">Opacidad:</label>
-            <input type="range" id="image-opacity" min="10" max="100" value="100">
-            <span id="opacity-value">100%</span>
-        </div>
-        <div class="style-control">
-            <label for="image-filter">Filtro:</label>
-            <select id="image-filter">
-                <option value="none">Ninguno</option>
-                <option value="grayscale">Escala de grises</option>
-                <option value="sepia">Sepia</option>
-                <option value="blur">Desenfoque</option>
-                <option value="brightness">Brillo</option>
+        
+            <div class="form-group" >
+                <button id="clear-design">Borrar Diseño</button>
+                <button id="addNew">Titulo</button>
+                <button id="addDivBtn">Item</button>
+                <div>
+            <h3>Fondo</h3>
+            <select name="backgroundColor" id="backgroundColor">
+                <option value="#ffffff">Blanco</option>
+                <option value="#f0f0f0">Gris Claro</option>
+                <option value="#000000">Negro</option>
+                <option value="#ff0000">Rojo</option>
+                <option value="#00ff00">Verde</option>
+                <option value="#0000ff">Azul</option>
             </select>
         </div>
+                
+            </div>
+        
+        <div class="editor-section" id="divEditable">
+            <!--Area de Controles Edicion-->
         </div>
-    
-             <div class="styled-gallery" id="styled-gallery"></div>
-        </div>
-
-
 
         <div class="expBottom">
             <button id="export-pdf">Exportar PDF</button>
             <button id="export-jpg">Exportar JPG</button>
+            
         </div>
+
+       
         
     </section>
 
-
-    <!--Contenedor invitacion-->
-    <section class="invitation-container" id="invitation">
-        <div class="invitation-content">
-            <div class="verse-section">
-                <p class="verse" id="invitation-verse">T. John de Solo, tenham amor. Pelo menos que perfeitamente todas as coisas? - Consumem 3:4.</p>
-            </div>
-
-            <div class="names-section">
-                <h1 id="invitation-names">Lorena Y Gustavo</h1>
-            </div>
-
-            <div class="details-section">
-                <p>📜 "Con honor, los invitamos a nuestra boda"</p>
-                <p>🌿 "Con alegría, compartimos nuestro amor"</p>
-                <p>🕊️ "Bajo la gracia de Dios, unimos nuestras vidas"</p>
-            </div>
-
-            <div class="date-section">
-                <p id="invitation-date">13 DE MAYO DE 2024</p>
-                <p id="invitation-timeM">SÁBADO, A LAS 16H</p>
-            </div>
-
-            <div class="date-section">
-                <p id="invitation-placeR">Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG</p>
-                <p id="invitation-timeR">SÁBADO, A LAS 16H</p>
-                <p id="invitation-placeM">Ele Tirou Causos - RK JPG - Tel: 0410, Uso-Baixo - MG</p>
-            </div>
-
-        
-
-            <div class="footer-section">
-                <p>Acompañados de nuestros seres queridos, iniciamos esta nueva etapa juntos.</p>
-            </div>
+    <section class="invitation-container">
+        <div class="invitation-content" id="invitation" >
+            <!--Lienzo-->
         </div>
     </section>
 
-    <script src="../js/editorPrueba.js"></script>
-    <script src="../js/exportarPrueba.js"></script>
-    <script src="../js/CargarFile.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script src="../js/Exportar.js"></script>
 
-    
 </body>
 </html>

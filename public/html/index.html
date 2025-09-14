@@ -20,8 +20,8 @@
                 <ul>
                     <li><a href="#" class="active">Inicio</a></li>
                     <li><a href="#templates">Plantillas</a></li>
-                    <li><a href="../html/boda.html">boda</a></li>
                     <li><a href="../html/prueba.html">editar</a></li>
+                    <li><a href="../html/login.html">login</a></li>
                     <li><a href="#how-it-works">Cómo funciona</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
@@ -54,6 +54,8 @@
                     <button class="category-btn" data-category="wedding">Bodas</button>
                     <button class="category-btn" data-category="birthday">Cumpleaños</button>
                     <button class="category-btn" data-category="corporate">Corporativas</button>
+                    <button class="category-btn" data-category="xv-years">XV Años</button>
+                    <button class="category-btn" data-category="baptismo">Bautizo</button>
                 </div>
                 <div class="templates-grid" id="templates-container">
                     <!-- Plantillas se cargarán dinámicamente -->
@@ -94,9 +96,9 @@
         </div>
     </footer>
 
-    <script src="../js/editor.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/templates.js"></script>
-   
+    
+    <script type="module" src="../js/templates-data.js"></script>
+    <script type="module" src="../js/templates-loader.js"></script>
+
 </body>
 </html>
